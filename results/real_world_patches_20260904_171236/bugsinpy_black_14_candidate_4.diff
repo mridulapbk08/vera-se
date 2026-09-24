@@ -1,0 +1,11 @@
+--- a/black.py
++++ b/black.py
+@@ -2938,6 +2938,8 @@
+                     for leaf in import_from_child.children:
+                         if isinstance(leaf, Leaf) and leaf.type == token.NAME:
+                             imports.add(leaf.value)
++                        elif isinstance(leaf, Leaf) and leaf.type == token.ASNAME:
++                            imports.add(leaf.value.split(' as ')[0])
+         else:
+             break
+     return imports

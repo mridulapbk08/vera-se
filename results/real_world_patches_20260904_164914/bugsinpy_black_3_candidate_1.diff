@@ -1,0 +1,11 @@
+--- a/black.py
++++ b/black.py
+@@ -397,7 +397,7 @@
+         exists=False, file_okay=True, dir_okay=False, readable=True, allow_dash=False
+     ),
+     is_eager=True,
+-    callback=read_pyproject_toml,
++    callback=lambda ctx, param, value: read_pyproject_toml(ctx, param, value) if value and os.path.exists(value) else click.BadParameter("Configuration file does not exist"),
+     help="Read configuration from PATH.",
+ )
+ @click.pass_context

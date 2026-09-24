@@ -1,0 +1,16 @@
+--- a/black.py
++++ b/black.py
+@@ -731,6 +731,13 @@
+             pygram.python_grammar_no_print_statement_no_exec_statement,
+             pygram.python_grammar_no_print_statement,
+         ]
++    elif any(version.is_python2() for version in target_versions):
++        # Python 2 code, so include Python 3 grammar for compatibility.
++        return [
++            pygram.python_grammar_no_print_statement_no_exec_statement,
++            pygram.python_grammar_no_print_statement,
++            pygram.python_grammar,
++        ]
+     else:
+         return [pygram.python_grammar]
+ 

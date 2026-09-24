@@ -1,0 +1,102 @@
+{
+  "timestamp": "20260829_162110",
+  "bug_description": "\nThe percentage function returns the wrong result.\n\nFor example:\n\npercentage(25, 100)\n\nshould return:\n\n25\n\nbut currently returns:\n\n0.25\n\nFix the implementation without changing the tests.\n",
+  "candidates": [
+    {
+      "candidate_id": 1,
+      "tests_passed": 2,
+      "tests_failed": 0,
+      "test_score": 1.0,
+      "change_risk_score": 0.3333333333333333,
+      "syntax_valid": true,
+      "changed_functions": [
+        "percentage"
+      ],
+      "unrelated_function_changes": 0,
+      "lines_added": 1,
+      "lines_removed": 1,
+      "final_score": 0.95,
+      "accepted": true
+    },
+    {
+      "candidate_id": 2,
+      "tests_passed": 1,
+      "tests_failed": 1,
+      "test_score": 0.5,
+      "change_risk_score": 0.0,
+      "syntax_valid": true,
+      "changed_functions": [],
+      "unrelated_function_changes": 0,
+      "lines_added": 0,
+      "lines_removed": 0,
+      "final_score": 0.5,
+      "accepted": false
+    },
+    {
+      "candidate_id": 3,
+      "tests_passed": 1,
+      "tests_failed": 1,
+      "test_score": 0.5,
+      "change_risk_score": 0.3333333333333333,
+      "syntax_valid": true,
+      "changed_functions": [
+        "percentage"
+      ],
+      "unrelated_function_changes": 0,
+      "lines_added": 1,
+      "lines_removed": 1,
+      "final_score": 0.45000000000000007,
+      "accepted": false
+    },
+    {
+      "candidate_id": 4,
+      "tests_passed": 2,
+      "tests_failed": 0,
+      "test_score": 1.0,
+      "change_risk_score": 0.6666666666666666,
+      "syntax_valid": true,
+      "changed_functions": [
+        "divide",
+        "percentage"
+      ],
+      "unrelated_function_changes": 1,
+      "lines_added": 3,
+      "lines_removed": 1,
+      "final_score": 0.75,
+      "accepted": false
+    },
+    {
+      "candidate_id": 5,
+      "tests_passed": 0,
+      "tests_failed": 0,
+      "test_score": 0.0,
+      "change_risk_score": 0.6666666666666666,
+      "syntax_valid": false,
+      "changed_functions": [
+        "divide",
+        "percentage"
+      ],
+      "unrelated_function_changes": 1,
+      "lines_added": 2,
+      "lines_removed": 2,
+      "final_score": 0.0,
+      "accepted": false
+    },
+    {
+      "candidate_id": 6,
+      "tests_passed": 2,
+      "tests_failed": 0,
+      "test_score": 1.0,
+      "change_risk_score": 0.5,
+      "syntax_valid": true,
+      "changed_functions": [
+        "percentage"
+      ],
+      "unrelated_function_changes": 0,
+      "lines_added": 3,
+      "lines_removed": 0,
+      "final_score": 0.625,
+      "accepted": false
+    }
+  ]
+}

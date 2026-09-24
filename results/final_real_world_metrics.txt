@@ -1,0 +1,51 @@
+VERA-SE FINAL REAL-WORLD PILOT METRICS
+=====================================
+
+Authoritative source runs
+-------------------------
+20260904_164914
+20260904_171236
+
+Benchmark
+---------
+Tasks: 10
+Requested candidates: 40
+Valid candidate instances: 28
+Unique valid patch contents: 27
+Valid generation rate: 0.700
+Tasks with at least one valid candidate: 8/10
+Oracle-labeled correct candidates: 1
+
+Visible-Test Baseline
+---------------------
+TP: 1
+FP: 1
+TN: 26
+FN: 0
+
+Accuracy: 0.964
+Precision: 0.500
+Recall: 1.000
+False Acceptance Rate: 0.037
+False Rejection Rate: 0.000
+
+VERA
+----
+TP: 0
+FP: 1
+TN: 26
+FN: 1
+
+Accuracy: 0.929
+Precision: 0.000
+Recall: 0.000
+False Acceptance Rate: 0.037
+False Rejection Rate: 1.000
+
+Interpretation note
+-------------------
+These real-world results come from a small pilot of 10 localized
+bugs from the Black project. Only one valid generated candidate
+was oracle-labeled correct, so recall and false-rejection estimates
+are based on a single positive example and should not be treated
+as statistically stable estimates.

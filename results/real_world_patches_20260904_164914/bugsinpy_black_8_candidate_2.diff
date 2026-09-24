@@ -1,0 +1,11 @@
+--- a/black.py
++++ b/black.py
+@@ -2407,7 +2407,7 @@
+             normalize_prefix(leaves[0], inside_brackets=True)
+             # Ensure a trailing comma when expected.
+             if original.is_import:
+-                if leaves[-1].type != token.COMMA:
++                if leaves[-1].type != token.COMMA and not leaves[-1].value.strip().endswith(', '):
+                     leaves.append(Leaf(token.COMMA, ","))
+     # Populate the line
+     for leaf in leaves:

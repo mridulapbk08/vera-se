@@ -1,0 +1,8 @@
+run_id,task_id,repair_type,requested_candidates,valid_generated_candidates,generation_complete,visible_accepted,vera_accepted,oracle_correct,baseline_a_false_acceptances,baseline_a_false_rejections,vera_false_acceptances,vera_false_rejections,vera_selected_candidate_id,vera_selected_score
+20260904_151701,bugsinpy_black_1,function,4,4,True,3,0,3,0,0,0,3,,
+20260904_151701,bugsinpy_black_3,region,4,4,True,4,4,4,0,0,0,0,1,0.9666666666666667
+20260904_151701,bugsinpy_black_4,region,4,4,True,0,0,0,0,0,0,0,,
+20260904_151701,bugsinpy_black_7,function,4,4,True,0,0,0,0,0,0,0,,
+20260904_151701,bugsinpy_black_8,function,4,4,True,0,0,0,0,0,0,0,,
+20260904_151701,bugsinpy_black_9,function,4,4,True,1,1,0,1,0,1,0,4,0.9590909090909091
+20260904_151701,bugsinpy_black_10,region,4,0,False,0,0,0,0,0,0,0,,

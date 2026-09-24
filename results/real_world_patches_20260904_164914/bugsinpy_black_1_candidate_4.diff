@@ -1,0 +1,40 @@
+--- a/black.py
++++ b/black.py
+@@ -618,7 +618,6 @@
+     if sys.platform == "win32":
+         # Work around https://bugs.python.org/issue26903
+         worker_count = min(worker_count, 61)
+-    executor = ProcessPoolExecutor(max_workers=worker_count)
+     try:
+         loop.run_until_complete(
+             schedule_formatting(
+@@ -628,12 +627,27 @@
+                 mode=mode,
+                 report=report,
+                 loop=loop,
+-                executor=executor,
++                executor=ProcessPoolExecutor(max_workers=worker_count),
++            )
++        )
++    except OSError:
++        loop.run_until_complete(
++            schedule_formatting(
++                sources=sources,
++                fast=fast,
++                write_back=write_back,
++                mode=mode,
++                report=report,
++                loop=loop,
++                executor=ThreadPoolExecutor(),
+             )
+         )
+     finally:
+         shutdown(loop)
+-        executor.shutdown()
++        try:
++            executor.shutdown()
++        except AttributeError:
++            pass
+ 
+ 
+ async def schedule_formatting(

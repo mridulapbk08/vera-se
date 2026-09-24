@@ -1,0 +1,714 @@
+run_id,task_id,candidate_id,file_path,explanation,patched_code,visible_passed,visible_failed,hidden_passed,hidden_failed,behavior_passed,behavior_failed,behavior_score,change_risk_score,syntax_valid,changed_functions,unrelated_function_changes,lines_added,lines_removed,vera_score,baseline_a,baseline_b,vera,oracle_correct,oracle_passed,oracle_failed
+1,task_1_percentage,1,calculator.py,Multiplies the result of the division by 100 to convert it to a percentage.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return (value / total) * 100",2,0,5,0,3,0,1.0,0.5,True,percentage,0,1,2,0.9500000000000001,True,True,True,True,5,0
+1,task_1_percentage,2,calculator.py,Converts the result to a percentage and rounds it to two decimal places.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return round((value / total) * 100, 2)",2,0,4,1,3,0,1.0,0.5,True,percentage,0,1,2,0.89,True,False,False,False,3,2
+1,task_1_percentage,3,calculator.py,Adds a check to prevent division by zero and returns 0 if total is zero.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    if total == 0:
+        return 0
+    return (value / total) * 100",2,0,5,0,3,0,1.0,0.8333333333333334,True,percentage,0,3,2,0.9166666666666667,True,True,True,True,5,0
+1,task_1_percentage,4,calculator.py,"Converts the result to a percentage, but only if the total is not zero, otherwise returns 0.","def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return value / total if total != 0 else 0",1,1,0,5,1,2,0.3333333333333333,0.5,True,percentage,0,1,2,0.35833333333333334,False,False,False,False,0,5
+2,task_1_percentage,1,calculator.py,Multiplies the result of the division by 100 to convert it to a percentage.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return value / total * 100",2,0,5,0,3,0,1.0,0.5,True,percentage,0,1,2,0.9500000000000001,True,True,True,True,5,0
+2,task_1_percentage,2,calculator.py,Swaps the order of multiplication and division to achieve the correct percentage calculation.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return value * 100 / total",2,0,5,0,3,0,1.0,0.5,True,percentage,0,1,2,0.9500000000000001,True,True,True,True,5,0
+2,task_1_percentage,3,calculator.py,Adds rounding to the result to ensure it is a clean percentage value.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return round(value / total * 100, 2)",2,0,4,1,3,0,1.0,0.5,True,percentage,0,1,2,0.89,True,False,False,False,3,2
+2,task_1_percentage,4,calculator.py,"Adds a check to prevent division by zero, returning 0 if the total is zero.","def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    if total == 0:
+        return 0
+    return value / total * 100",2,0,5,0,3,0,1.0,0.8333333333333334,True,percentage,0,3,2,0.9166666666666667,True,True,True,True,5,0
+3,task_1_percentage,1,calculator.py,Multiply the result of the division by 100 to convert it to a percentage.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return value / total * 100",2,0,5,0,3,0,1.0,0.5,True,percentage,0,1,2,0.9500000000000001,True,True,True,True,5,0
+3,task_1_percentage,2,calculator.py,Convert the result to a percentage and round it to two decimal places for better readability.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return round(value / total * 100, 2)",2,0,4,1,3,0,1.0,0.5,True,percentage,0,1,2,0.89,True,False,False,False,3,2
+3,task_1_percentage,3,calculator.py,"Add a check to prevent division by zero, which would result in an error.","def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    if total == 0:
+        return 0
+    return value / total * 100",2,0,5,0,3,0,1.0,0.8333333333333334,True,percentage,0,3,2,0.9166666666666667,True,True,True,True,5,0
+3,task_1_percentage,4,calculator.py,Return the result as a formatted string with two decimal places and a percentage sign.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return '{:.2f}%'.format(value / total * 100)",1,1,0,5,0,3,0.0,0.5,True,percentage,0,1,2,0.275,False,False,False,False,0,5
+4,task_1_percentage,1,calculator.py,Multiplies the result of value/total by 100 to convert it to a percentage.,"def divide(a: float, b: float) -> float:
+    return a / b
+def percentage(value: float, total: float) -> float:
+    return (value / total) * 100",2,0,5,0,3,0,1.0,0.6666666666666666,True,percentage,0,1,3,0.9333333333333333,True,True,True,True,5,0
+4,task_1_percentage,2,calculator.py,Multiplies the result of value/total by 100 and rounds it to two decimal places for precision.,"def divide(a: float, b: float) -> float:
+    return a / b
+def percentage(value: float, total: float) -> float:
+    return round(value / total * 100, 2)",2,0,4,1,3,0,1.0,0.6666666666666666,True,percentage,0,1,3,0.8733333333333333,True,False,False,False,3,2
+4,task_1_percentage,3,calculator.py,Adds a check to prevent division by zero and returns 0 if total is zero.,"def divide(a: float, b: float) -> float:
+    return a / b
+def percentage(value: float, total: float) -> float:
+    if total == 0:
+        return 0
+    return (value / total) * 100",2,0,5,0,3,0,1.0,1.0,True,percentage,0,3,3,0.9,True,True,True,True,5,0
+4,task_1_percentage,4,calculator.py,Multiplies the result of value/total by 100 and converts it to an integer to remove the decimal part.,"def divide(a: float, b: float) -> float:
+    return a / b
+def percentage(value: float, total: float) -> float:
+    return int(value / total * 100)",2,0,3,2,2,1,0.6666666666666666,0.6666666666666666,True,percentage,0,1,3,0.73,True,False,False,False,2,3
+5,task_1_percentage,1,calculator.py,Converts the result of the percentage function to an integer to represent a percentage.,"def divide(a: float, b: float) -> float:
+    return a / b
+def percentage(value: float, total: float) -> int:
+    return int(value / total * 100)",2,0,3,2,2,1,0.6666666666666666,1.0,True,percentage,0,2,4,0.6966666666666667,True,False,False,False,2,3
+5,task_1_percentage,2,calculator.py,Multiplies the result of the percentage function by 100 to represent a percentage.,"def divide(a: float, b: float) -> float:
+    return a / b
+def percentage(value: float, total: float) -> float:
+    return (value / total) * 100",2,0,5,0,3,0,1.0,0.6666666666666666,True,percentage,0,1,3,0.9333333333333333,True,True,True,True,5,0
+5,task_1_percentage,3,calculator.py,Rounds the result of the percentage function to 2 decimal places for better precision.,"def divide(a: float, b: float) -> float:
+    return a / b
+def percentage(value: float, total: float) -> float:
+    return round(value / total * 100, 2)",2,0,4,1,3,0,1.0,0.6666666666666666,True,percentage,0,1,3,0.8733333333333333,True,False,False,False,3,2
+5,task_1_percentage,4,calculator.py,Ensures that the percentage is rounded up if the decimal part is non-zero.,"def divide(a: float, b: float) -> float:
+    return a / b
+def percentage(value: float, total: float) -> float:
+    return int(value / total * 100) if value / total == int(value / total) else int(value / total * 100) + 1",1,1,0,5,1,2,0.3333333333333333,0.6666666666666666,True,percentage,0,1,3,0.3416666666666667,False,False,False,False,0,5
+6,task_1_percentage,1,calculator.py,Multiplies the result of the division by 100 to convert it to a percentage.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return value * 100 / total",2,0,5,0,3,0,1.0,0.5,True,percentage,0,1,2,0.9500000000000001,True,True,True,True,5,0
+6,task_1_percentage,2,calculator.py,Converts the result to an integer to ensure whole numbers are returned.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return int(value / total * 100)",2,0,3,2,2,1,0.6666666666666666,0.5,True,percentage,0,1,2,0.7466666666666667,True,False,False,False,2,3
+6,task_1_percentage,3,calculator.py,Rounds the result to two decimal places to provide a more precise percentage.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return round(value / total * 100, 2)",2,0,4,1,3,0,1.0,0.5,True,percentage,0,1,2,0.89,True,False,False,False,3,2
+6,task_1_percentage,4,calculator.py,Formats the result as a string with two decimal places and a percentage sign.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return '{:.2f}%'.format(value / total * 100)",1,1,0,5,0,3,0.0,0.5,True,percentage,0,1,2,0.275,False,False,False,False,0,5
+7,task_1_percentage,1,calculator.py,Multiplies the result of the division by 100 to convert it to a percentage.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return value / total * 100",2,0,5,0,3,0,1.0,0.5,True,percentage,0,1,2,0.9500000000000001,True,True,True,True,5,0
+7,task_1_percentage,2,calculator.py,Multiplies the result of the division by 100 and rounds it to two decimal places for precision.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return round(value / total * 100, 2)",2,0,4,1,3,0,1.0,0.5,True,percentage,0,1,2,0.89,True,False,False,False,3,2
+7,task_1_percentage,3,calculator.py,Multiplies the result of the division by 100 and converts it to an integer to remove any decimal places.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return int(value / total * 100)",2,0,3,2,2,1,0.6666666666666666,0.5,True,percentage,0,1,2,0.7466666666666667,True,False,False,False,2,3
+7,task_1_percentage,4,calculator.py,Multiplies the result of the division by 100 and includes a check to avoid division by zero.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return value / total * 100 if total != 0 else None",2,0,5,0,3,0,1.0,0.5,True,percentage,0,1,2,0.9500000000000001,True,True,True,True,5,0
+8,task_1_percentage,1,calculator.py,Converts the result to an integer to return a percentage value.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return int((value / total) * 100)",2,0,3,2,2,1,0.6666666666666666,0.5,True,percentage,0,1,2,0.7466666666666667,True,False,False,False,2,3
+8,task_1_percentage,2,calculator.py,Rounds the result to the nearest whole number to return a percentage value.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return round((value / total) * 100)",2,0,3,2,2,1,0.6666666666666666,0.5,True,percentage,0,1,2,0.7466666666666667,True,False,False,False,2,3
+8,task_1_percentage,3,calculator.py,Formats the result as a string with a percentage sign.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return '{:.0f}%'.format(value / total * 100)",1,1,0,5,0,3,0.0,0.5,True,percentage,0,1,2,0.275,False,False,False,False,0,5
+8,task_1_percentage,4,calculator.py,"Checks if the result is an integer and returns it as an integer, otherwise returns the rounded integer value.","def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return (value / total) * 100 if (value / total) * 100 == int((value / total) * 100) else int((value / total) * 100)",2,0,3,2,2,1,0.6666666666666666,0.5,True,percentage,0,1,2,0.7466666666666667,True,False,False,False,2,3
+9,task_1_percentage,1,calculator.py,Multiply the result of the division by 100 to convert it to a percentage.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return (value / total) * 100",2,0,5,0,3,0,1.0,0.5,True,percentage,0,1,2,0.9500000000000001,True,True,True,True,5,0
+9,task_1_percentage,2,calculator.py,Add a check to handle the case where the total is zero to avoid division by zero.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    if total == 0:
+        return 0
+    return (value / total) * 100",2,0,5,0,3,0,1.0,0.8333333333333334,True,percentage,0,3,2,0.9166666666666667,True,True,True,True,5,0
+9,task_1_percentage,3,calculator.py,Round the result to two decimal places for better readability.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return round((value / total) * 100, 2)",2,0,4,1,3,0,1.0,0.5,True,percentage,0,1,2,0.89,True,False,False,False,3,2
+9,task_1_percentage,4,calculator.py,Format the result as a string with two decimal places and a percentage sign.,"def divide(a: float, b: float) -> float:
+    return a / b
+
+def percentage(value: float, total: float) -> float:
+    return '{:.2f}%'.format((value / total) * 100)",1,1,0,5,0,3,0.0,0.5,True,percentage,0,1,2,0.275,False,False,False,False,0,5
+10,task_1_percentage,1,calculator.py,Multiply the result of the division by 100 to convert the ratio to a percentage.,"def divide(a: float, b: float) -> float:\n    return a / b\n\ndef percentage(value: float, total: float) -> float:\n    return value / total * 100",0,0,0,0,0,1,0.0,1.0,False,"divide,percentage",1,1,6,0.0,False,False,False,False,0,0
+10,task_1_percentage,2,calculator.py,Multiply the result of the division by 100 and convert it to an integer to get a whole number percentage.,"def divide(a: float, b: float) -> float:\n    return a / b\n\ndef percentage(value: float, total: float) -> float:\n    return int(value / total * 100)",0,0,0,0,0,1,0.0,1.0,False,"divide,percentage",1,1,6,0.0,False,False,False,False,0,0
+10,task_1_percentage,3,calculator.py,"Multiply the result of the division by 100 and format it to remove decimal places, ensuring the result is an integer percentage.","def divide(a: float, b: float) -> float:\n    return a / b\n\ndef percentage(value: float, total: float) -> float:\n    return format(value / total * 100, '.0f')",0,0,0,0,0,1,0.0,1.0,False,"divide,percentage",1,1,6,0.0,False,False,False,False,0,0
+10,task_1_percentage,4,calculator.py,Multiply the result of the division by 100 and round it to the nearest whole number to get a percentage.,"def divide(a: float, b: float) -> float:\n    return a / b\n\ndef percentage(value: float, total: float) -> float:\n    return round(value / total * 100)",0,0,0,0,0,1,0.0,1.0,False,"divide,percentage",1,1,6,0.0,False,False,False,False,0,0
+1,task_2_string,1,text_utils.py,Adds strip() to remove leading and trailing whitespace before converting to lowercase.,"def normalize_name(name: str) -> str:
+    return name.strip().lower()",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,1,1,0.9,True,True,True,True,5,0
+1,task_2_string,2,text_utils.py,Replaces spaces with no space and then converts to lowercase.,"def normalize_name(name: str) -> str:
+    return ''.join(name.split()).lower()",1,0,5,1,3,1,0.75,1.0,True,normalize_name,0,1,1,0.7875,True,False,False,False,3,2
+1,task_2_string,3,text_utils.py,Replaces all spaces with no space and then converts to lowercase.,"def normalize_name(name: str) -> str:
+    return name.replace(' ', '').lower()",1,0,5,1,3,1,0.75,1.0,True,normalize_name,0,1,1,0.7875,True,False,False,False,3,2
+1,task_2_string,4,text_utils.py,Uses lstrip() and rstrip() to remove leading and trailing whitespace separately and then converts to lowercase.,"def normalize_name(name: str) -> str:
+    return name.lstrip().rstrip().lower()",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,1,1,0.9,True,True,True,True,5,0
+2,task_2_string,1,text_utils.py,The function should first remove leading and trailing whitespace using strip() and then convert the name to lowercase using lower().,"def normalize_name(name: str) -> str:
+    return name.strip().lower()",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,1,1,0.9,True,True,True,True,5,0
+2,task_2_string,2,text_utils.py,"The function should split the name into words, remove any extra spaces, and then join them back together before converting to lowercase.","def normalize_name(name: str) -> str:
+    return ''.join(name.split()).lower()",1,0,5,1,3,1,0.75,1.0,True,normalize_name,0,1,1,0.7875,True,False,False,False,3,2
+2,task_2_string,3,text_utils.py,"The function should replace all spaces with an empty string to remove leading and trailing whitespace, and then convert the name to lowercase.","def normalize_name(name: str) -> str:
+    return name.replace(' ', '').lower()",1,0,5,1,3,1,0.75,1.0,True,normalize_name,0,1,1,0.7875,True,False,False,False,3,2
+2,task_2_string,4,text_utils.py,"The function should split the name into words, filter out any empty strings resulting from leading/trailing spaces, join them back together, and then convert to lowercase.","def normalize_name(name: str) -> str:
+    return ''.join(filter(str.strip, name.split())).lower()",1,0,5,1,3,1,0.75,1.0,True,normalize_name,0,1,1,0.7875,True,False,False,False,3,2
+3,task_2_string,1,text_utils.py,Removed trailing whitespace before converting to lowercase.,"def normalize_name(name: str) -> str:
+    return name.strip().lower()",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,1,1,0.9,True,True,True,True,5,0
+3,task_2_string,2,text_utils.py,Added a type check to ensure the input is a string.,"def normalize_name(name: str) -> str:
+    return name.strip().lower() if isinstance(name, str) else name",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,1,1,0.9,True,True,True,True,5,0
+3,task_2_string,3,text_utils.py,Replaced multiple spaces with a single space before converting to lowercase.,"def normalize_name(name: str) -> str:
+    return ' '.join(name.split()).lower()",1,0,6,0,3,1,0.75,1.0,True,normalize_name,0,1,1,0.8375,True,True,False,False,4,1
+3,task_2_string,4,text_utils.py,Removed non-alphanumeric characters before converting to lowercase.,"def normalize_name(name: str) -> str:
+    return ''.join(filter(str.isalnum, name)).lower()",1,0,3,3,1,3,0.25,1.0,True,normalize_name,0,1,1,0.5625,True,False,False,False,1,4
+4,task_2_string,1,text_utils.py,Strips leading and trailing whitespace before converting to lowercase.,"def normalize_name(name: str) -> str:
+    return name.strip().lower()",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,1,1,0.9,True,True,True,True,5,0
+4,task_2_string,2,text_utils.py,Strips whitespace and handles empty strings.,"def normalize_name(name: str) -> str:
+    name = name.strip()
+    if name:
+        return name.lower()
+    return ''",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,4,1,0.9,True,True,True,True,5,0
+4,task_2_string,3,text_utils.py,"Iterates over each character, strips whitespace, and converts to lowercase.","def normalize_name(name: str) -> str:
+    return ''.join(char.lower() for char in name.strip())",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,1,1,0.9,True,True,True,True,5,0
+4,task_2_string,4,text_utils.py,Uses regular expressions to remove whitespace and then converts to lowercase.,"def normalize_name(name: str) -> str:
+    return re.sub(r'\s+', '', name).lower()",0,1,0,6,0,4,0.0,1.0,True,normalize_name,0,1,1,0.1,False,False,False,False,0,5
+5,task_2_string,1,text_utils.py,Removes leading and trailing whitespace and then converts the name to lowercase.,"def normalize_name(name: str) -> str:
+    return name.strip().lower()",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,1,1,0.9,True,True,True,True,5,0
+5,task_2_string,2,text_utils.py,Separate calls to lstrip and rstrip to ensure only leading and trailing whitespace is removed.,"def normalize_name(name: str) -> str:
+    return name.lstrip().rstrip().lower()",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,1,1,0.9,True,True,True,True,5,0
+5,task_2_string,3,text_utils.py,"Checks if the input is a string before processing, ensuring it doesn't raise an error on non-string inputs.","def normalize_name(name: str) -> str:
+    return name.strip().lower() if isinstance(name, str) else name",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,1,1,0.9,True,True,True,True,5,0
+5,task_2_string,4,text_utils.py,"Splits the name on whitespace, joins it back together with a single space, and then converts it to lowercase.","def normalize_name(name: str) -> str:
+    return ' '.join(name.split()).lower()",1,0,6,0,3,1,0.75,1.0,True,normalize_name,0,1,1,0.8375,True,True,False,False,4,1
+6,task_2_string,1,text_utils.py,Added strip() to remove leading and trailing whitespace before converting to lowercase.,"def normalize_name(name: str) -> str:
+    return name.strip().lower()",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,1,1,0.9,True,True,True,True,5,0
+6,task_2_string,2,text_utils.py,Used lstrip() and rstrip() separately to remove leading and trailing whitespace before converting to lowercase.,"def normalize_name(name: str) -> str:
+    return name.lstrip().rstrip().lower()",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,1,1,0.9,True,True,True,True,5,0
+6,task_2_string,3,text_utils.py,Used split() to remove all whitespace and then joined the parts together before converting to lowercase.,"def normalize_name(name: str) -> str:
+    return ''.join(name.split()).lower()",1,0,5,1,3,1,0.75,1.0,True,normalize_name,0,1,1,0.7875,True,False,False,False,3,2
+6,task_2_string,4,text_utils.py,"Used split() to remove all whitespace, then joined the parts with a single space, and finally converted to lowercase.","def normalize_name(name: str) -> str:
+    return ' '.join(name.split()).lower()",1,0,6,0,3,1,0.75,1.0,True,normalize_name,0,1,1,0.8375,True,True,False,False,4,1
+7,task_2_string,1,text_utils.py,Strips leading and trailing whitespace before converting the name to lowercase.,"def normalize_name(name: str) -> str:
+    return name.strip().lower()",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,1,1,0.9,True,True,True,True,5,0
+7,task_2_string,2,text_utils.py,Separate stripping of leading and trailing whitespace before converting the name to lowercase.,"def normalize_name(name: str) -> str:
+    return name.lstrip().rstrip().lower()",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,1,1,0.9,True,True,True,True,5,0
+7,task_2_string,3,text_utils.py,Removes all whitespace by splitting the string and then joining it back together before converting to lowercase.,"def normalize_name(name: str) -> str:
+    return ''.join(name.split()).lower()",1,0,5,1,3,1,0.75,1.0,True,normalize_name,0,1,1,0.7875,True,False,False,False,3,2
+7,task_2_string,4,text_utils.py,Replaces all spaces with an empty string before converting the name to lowercase.,"def normalize_name(name: str) -> str:
+    return name.replace(' ', '').lower()",1,0,5,1,3,1,0.75,1.0,True,normalize_name,0,1,1,0.7875,True,False,False,False,3,2
+8,task_2_string,1,text_utils.py,The function now removes leading and trailing whitespace before converting the name to lowercase.,"def normalize_name(name: str) -> str:
+    return name.strip().lower()",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,1,1,0.9,True,True,True,True,5,0
+8,task_2_string,2,text_utils.py,The function now converts the name to lowercase before removing leading and trailing whitespace.,"def normalize_name(name: str) -> str:
+    return name.lower().strip()",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,1,1,0.9,True,True,True,True,5,0
+8,task_2_string,3,text_utils.py,"The function splits the name by whitespace, joins it back together with a single space, and then converts it to lowercase.","def normalize_name(name: str) -> str:
+    return ' '.join(name.split()).lower()",1,0,6,0,3,1,0.75,1.0,True,normalize_name,0,1,1,0.8375,True,True,False,False,4,1
+8,task_2_string,4,text_utils.py,"The function uses a regular expression to replace multiple whitespace characters with a single space, removes leading and trailing whitespace, and converts the name to lowercase.","def normalize_name(name: str) -> str:
+    import re
+    return re.sub(r'\s+', ' ', name).strip().lower()",1,0,6,0,3,1,0.75,1.0,True,normalize_name,0,2,1,0.8375,True,True,False,False,4,1
+9,task_2_string,1,text_utils.py,This candidate uses the `strip()` method to remove leading and trailing whitespace before converting the name to lowercase.,"def normalize_name(name: str) -> str:
+    return name.strip().lower()",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,1,1,0.9,True,True,True,True,5,0
+9,task_2_string,2,text_utils.py,"This candidate uses a generator expression to process each character in the name, ensuring that only alphanumeric characters and whitespace are converted to lowercase.","def normalize_name(name: str) -> str:
+    return ''.join(char.lower() for char in name if char.isalnum() or char.isspace())",0,1,1,5,1,3,0.25,1.0,True,normalize_name,0,1,1,0.2125,False,False,False,False,1,4
+9,task_2_string,3,text_utils.py,This candidate first converts the entire name to lowercase and then removes leading and trailing whitespace.,"def normalize_name(name: str) -> str:
+    return name.lower().strip()",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,1,1,0.9,True,True,True,True,5,0
+9,task_2_string,4,text_utils.py,This candidate filters out non-alphabetic characters before converting the remaining characters to lowercase.,"def normalize_name(name: str) -> str:
+    return ''.join(char for char in name if char.isalpha()).lower()",1,0,3,3,1,3,0.25,1.0,True,normalize_name,0,1,1,0.5625,True,False,False,False,1,4
+10,task_2_string,1,text_utils.py,The function now removes leading and trailing whitespace before converting the name to lowercase.,"def normalize_name(name: str) -> str:
+    return name.strip().lower()",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,1,1,0.9,True,True,True,True,5,0
+10,task_2_string,2,text_utils.py,Ensures that the function handles empty strings gracefully without raising an error.,"def normalize_name(name: str) -> str:
+    return name.strip().lower() if name else name",1,0,6,0,4,0,1.0,1.0,True,normalize_name,0,1,1,0.9,True,True,True,True,5,0
+10,task_2_string,3,text_utils.py,Removes all non-alphanumeric characters and then normalizes the name.,"def normalize_name(name: str) -> str:
+    return ''.join(filter(str.isalnum, name.lower())).strip()",1,0,3,3,1,3,0.25,1.0,True,normalize_name,0,1,1,0.5625,True,False,False,False,1,4
+10,task_2_string,4,text_utils.py,Removes all spaces before converting the name to lowercase.,"def normalize_name(name: str) -> str:
+    return name.replace(' ', '').lower()",1,0,5,1,3,1,0.75,1.0,True,normalize_name,0,1,1,0.7875,True,False,False,False,3,2
+1,task_3_list,1,list_utils.py,The function now correctly returns the last element of the list using negative indexing.,"def last_item(items):
+    return items[-1]",1,0,4,0,4,0,1.0,1.0,True,last_item,0,1,1,0.9,True,True,True,True,4,0
+1,task_3_list,2,list_utils.py,"Added a check to return None if the list is empty, avoiding an IndexError.","def last_item(items):
+    if len(items) > 0:
+        return items[-1]
+    else:
+        return None",1,0,4,0,4,0,1.0,1.0,True,last_item,0,4,1,0.9,True,True,True,True,4,0
+1,task_3_list,3,list_utils.py,Revised the function to use len(items) - 1 to index the last element.,"def last_item(items):
+    return items[len(items) - 1]",1,0,4,0,4,0,1.0,1.0,True,last_item,0,1,1,0.9,True,True,True,True,4,0
+1,task_3_list,4,list_utils.py,"Used the pop() method to remove and return the last item, with a check to return None if the list is empty.","def last_item(items):
+    return items.pop() if items else None",1,0,2,2,1,3,0.25,1.0,True,last_item,0,1,1,0.5625,True,False,False,False,1,3
+2,task_3_list,1,list_utils.py,Using negative indexing to return the last item of the list.,"def last_item(items):
+    return items[-1]",1,0,4,0,4,0,1.0,1.0,True,last_item,0,1,1,0.9,True,True,True,True,4,0
+2,task_3_list,2,list_utils.py,Handling the case where the list is empty.,"def last_item(items):
+    if len(items) == 0:
+        return None
+    return items[len(items) - 1]",1,0,4,0,4,0,1.0,1.0,True,last_item,0,3,1,0.9,True,True,True,True,4,0
+2,task_3_list,3,list_utils.py,Using the pop method to remove and return the last item.,"def last_item(items):
+    return items.pop()",1,0,2,2,1,3,0.25,1.0,True,last_item,0,1,1,0.5625,True,False,False,False,1,3
+2,task_3_list,4,list_utils.py,Checking if the list is empty before attempting to access the last item.,"def last_item(items):
+    return items[len(items) - 1] if len(items) > 0 else None",1,0,4,0,4,0,1.0,1.0,True,last_item,0,1,1,0.9,True,True,True,True,4,0
+3,task_3_list,1,list_utils.py,Using negative indexing to get the last element of the list.,"def last_item(items):
+    return items[-1]",1,0,4,0,4,0,1.0,1.0,True,last_item,0,1,1,0.9,True,True,True,True,4,0
+3,task_3_list,2,list_utils.py,Handling the case when the list is empty by returning None.,"def last_item(items):
+    if items:
+        return items[-1]
+    return None",1,0,4,0,4,0,1.0,1.0,True,last_item,0,3,1,0.9,True,True,True,True,4,0
+3,task_3_list,3,list_utils.py,Correctly accessing the last element by subtracting 1 from the length.,"def last_item(items):
+    return items[len(items) - 1]",1,0,4,0,4,0,1.0,1.0,True,last_item,0,1,1,0.9,True,True,True,True,4,0
+3,task_3_list,4,list_utils.py,Using the pop() method to remove and return the last element of the list.,"def last_item(items):
+    return items.pop()",1,0,2,2,1,3,0.25,1.0,True,last_item,0,1,1,0.5625,True,False,False,False,1,3
+4,task_3_list,1,list_utils.py,Using negative indexing to directly access the last element of the list.,"def last_item(items):
+    return items[-1]",1,0,4,0,4,0,1.0,1.0,True,last_item,0,1,1,0.9,True,True,True,True,4,0
+4,task_3_list,2,list_utils.py,Adding a check to handle the case when the list is empty.,"def last_item(items):
+    if len(items) == 0:
+        return None
+    return items[len(items) - 1]",1,0,4,0,4,0,1.0,1.0,True,last_item,0,3,1,0.9,True,True,True,True,4,0
+4,task_3_list,3,list_utils.py,Using the pop method to remove and return the last element of the list.,"def last_item(items):
+    return items.pop()",1,0,2,2,1,3,0.25,1.0,True,last_item,0,1,1,0.5625,True,False,False,False,1,3
+4,task_3_list,4,list_utils.py,Combining negative indexing with a conditional check for an empty list.,"def last_item(items):
+    return items[len(items) - 1] if items else None",1,0,4,0,4,0,1.0,1.0,True,last_item,0,1,1,0.9,True,True,True,True,4,0
+5,task_3_list,1,list_utils.py,Handles the case where the list is empty and returns the last item correctly.,"def last_item(items):
+    if len(items) == 0:
+        raise IndexError('The list is empty')
+    return items[len(items) - 1]",1,0,4,0,4,0,1.0,1.0,True,last_item,0,3,1,0.9,True,True,True,True,4,0
+5,task_3_list,2,list_utils.py,Uses Python's negative indexing to directly return the last item.,"def last_item(items):
+    return items[-1]",1,0,4,0,4,0,1.0,1.0,True,last_item,0,1,1,0.9,True,True,True,True,4,0
+5,task_3_list,3,list_utils.py,"Checks if the list is empty and returns None if it is, otherwise returns the last item.","def last_item(items):
+    if not items:
+        return None
+    return items[-1]",1,0,4,0,4,0,1.0,1.0,True,last_item,0,3,1,0.9,True,True,True,True,4,0
+5,task_3_list,4,list_utils.py,Removes and returns the last item from the list. Handles the case where the list is empty by returning None.,"def last_item(items):
+    if len(items) == 0:
+        return None
+    return items.pop()",1,0,2,2,1,3,0.25,1.0,True,last_item,0,3,1,0.5625,True,False,False,False,1,3
+6,task_3_list,1,list_utils.py,Using negative indexing to get the last item in the list.,"def last_item(items):
+    return items[-1]",1,0,4,0,4,0,1.0,1.0,True,last_item,0,1,1,0.9,True,True,True,True,4,0
+6,task_3_list,2,list_utils.py,Adding a check for an empty list and raising an IndexError if it is.,"def last_item(items):
+    if not items:
+        raise IndexError('The list is empty')
+    return items[-1]",1,0,4,0,4,0,1.0,1.0,True,last_item,0,3,1,0.9,True,True,True,True,4,0
+6,task_3_list,3,list_utils.py,"Using pop to remove and return the last item, or returning None if the list is empty.","def last_item(items):
+    return items.pop() if items else None",1,0,2,2,1,3,0.25,1.0,True,last_item,0,1,1,0.5625,True,False,False,False,1,3
+6,task_3_list,4,list_utils.py,"Using a different way to calculate the index of the last item, with a check for an empty list.","def last_item(items):
+    return items[len(items) - 1] if items else None",1,0,4,0,4,0,1.0,1.0,True,last_item,0,1,1,0.9,True,True,True,True,4,0
+7,task_3_list,1,list_utils.py,Handles the case where the list is empty and returns None. Uses negative indexing to get the last item.,"def last_item(items):
+    if not items:
+        return None
+    return items[-1]",1,0,4,0,4,0,1.0,1.0,True,last_item,0,3,1,0.9,True,True,True,True,4,0
+7,task_3_list,2,list_utils.py,Uses exception handling to catch an IndexError if the list is empty and returns None.,"def last_item(items):
+    try:
+        return items[-1]
+    except IndexError:
+        return None",1,0,4,0,4,0,1.0,1.0,True,last_item,0,4,1,0.9,True,True,True,True,4,0
+7,task_3_list,3,list_utils.py,"Uses the pop() method to remove and return the last item, or returns None if the list is empty.","def last_item(items):
+    return items.pop() if items else None",1,0,2,2,1,3,0.25,1.0,True,last_item,0,1,1,0.5625,True,False,False,False,1,3
+7,task_3_list,4,list_utils.py,"Uses len() to get the length of the list and subtracts 1 to get the index of the last item, returning None if the list is empty.","def last_item(items):
+    return items[len(items) - 1] if items else None",1,0,4,0,4,0,1.0,1.0,True,last_item,0,1,1,0.9,True,True,True,True,4,0
+8,task_3_list,1,list_utils.py,Returns the last element of the list using negative indexing.,"def last_item(items):
+    return items[-1]",1,0,4,0,4,0,1.0,1.0,True,last_item,0,1,1,0.9,True,True,True,True,4,0
+8,task_3_list,2,list_utils.py,Removes and returns the last element of the list.,"def last_item(items):
+    return items.pop()",1,0,2,2,1,3,0.25,1.0,True,last_item,0,1,1,0.5625,True,False,False,False,1,3
+8,task_3_list,3,list_utils.py,Checks if the list is empty and raises an IndexError if it is.,"def last_item(items):
+    if len(items) == 0:
+        raise IndexError('last_item() called on empty list')
+    return items[len(items) - 1]",1,0,4,0,4,0,1.0,1.0,True,last_item,0,3,1,0.9,True,True,True,True,4,0
+8,task_3_list,4,list_utils.py,"Returns the last element if the list is not empty, otherwise returns None.","def last_item(items):
+    return items[len(items) - 1] if items else None",1,0,4,0,4,0,1.0,1.0,True,last_item,0,1,1,0.9,True,True,True,True,4,0
+9,task_3_list,1,list_utils.py,Fixed the bug by using len(items) - 1 to index the last element and added a check for an empty list to raise an IndexError.,"def last_item(items):
+    if len(items) == 0:
+        raise IndexError(""last_item called on empty list"")
+    return items[len(items) - 1]",1,0,4,0,4,0,1.0,1.0,True,last_item,0,3,1,0.9,True,True,True,True,4,0
+9,task_3_list,2,list_utils.py,Replaced the indexing with Python's negative indexing to directly access the last element.,"def last_item(items):
+    return items[-1]",1,0,4,0,4,0,1.0,1.0,True,last_item,0,1,1,0.9,True,True,True,True,4,0
+9,task_3_list,3,list_utils.py,"Used the pop() method to remove and return the last item, and returned None if the list is empty.","def last_item(items):
+    return items.pop() if items else None",1,0,2,2,1,3,0.25,1.0,True,last_item,0,1,1,0.5625,True,False,False,False,1,3
+9,task_3_list,4,list_utils.py,"Used the reversed() function and next() to get the last item, and returned None if the list is empty.","def last_item(items):
+    return next(reversed(items), None)",1,0,4,0,4,0,1.0,1.0,True,last_item,0,1,1,0.9,True,True,True,True,4,0
+10,task_3_list,1,list_utils.py,Using negative indexing to directly access the last element of the list.,"def last_item(items):
+    return items[-1]",1,0,4,0,4,0,1.0,1.0,True,last_item,0,1,1,0.9,True,True,True,True,4,0
+10,task_3_list,2,list_utils.py,Handling the case where the list might be empty to avoid an IndexError.,"def last_item(items):
+    if len(items) == 0:
+        return None
+    return items[len(items) - 1]",1,0,4,0,4,0,1.0,1.0,True,last_item,0,3,1,0.9,True,True,True,True,4,0
+10,task_3_list,3,list_utils.py,"Using the pop method to remove and return the last element, and handling an empty list.","def last_item(items):
+    return items.pop() if items else None",1,0,2,2,1,3,0.25,1.0,True,last_item,0,1,1,0.5625,True,False,False,False,1,3
+10,task_3_list,4,list_utils.py,"Adding a check to return None if the list is empty, ensuring the function does not raise an IndexError.","def last_item(items):
+    return items[len(items) - 1] if items else None",1,0,4,0,4,0,1.0,1.0,True,last_item,0,1,1,0.9,True,True,True,True,4,0
+1,task_4_dict,1,dict_utils.py,"This candidate uses a simple if-else statement to check if the key exists in the dictionary. If it does, it returns the value; otherwise, it returns the default value. This ensures that the dictionary is not modified.","def get_value(data: dict, key: str, default=None):
+    if key in data:
+        return data[key]
+    else:
+        return default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,4,1,0.9,True,True,True,True,4,0
+1,task_4_dict,2,dict_utils.py,"This candidate uses the built-in `get` method of dictionaries, which retrieves the value for the specified key if it exists, otherwise returns the default value. This method does not modify the dictionary.","def get_value(data: dict, key: str, default=None):
+    return data.get(key, default)",1,0,3,0,5,0,1.0,1.0,True,get_value,0,1,1,0.9,True,True,True,True,4,0
+1,task_4_dict,3,dict_utils.py,"This candidate uses a try-except block to catch the `KeyError` exception when the key is not found in the dictionary. If the exception is caught, it returns the default value. This method does not modify the dictionary.","def get_value(data: dict, key: str, default=None):
+    try:
+        return data[key]
+    except KeyError:
+        return default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,4,1,0.9,True,True,True,True,4,0
+1,task_4_dict,4,dict_utils.py,"This candidate attempts to retrieve the value using the `pop` method, which removes the key from the dictionary if it exists. If the key is not found, it returns the default value. However, this candidate mistakenly modifies the dictionary as specified in the task description.","def get_value(data: dict, key: str, default=None):
+    if key in data:
+        value = data[key]
+        del data[key]
+        return value
+    else:
+        return default",1,0,3,0,3,2,0.6,1.0,True,get_value,0,6,1,0.8,True,True,False,False,2,2
+2,task_4_dict,1,dict_utils.py,Use the dict.get() method to retrieve the value without modifying the dictionary.,"def get_value(data: dict, key: str, default=None):
+    return data.get(key, default)",1,0,3,0,5,0,1.0,1.0,True,get_value,0,1,1,0.9,True,True,True,True,4,0
+2,task_4_dict,2,dict_utils.py,Check if the key exists in the dictionary before retrieving the value.,"def get_value(data: dict, key: str, default=None):
+    if key in data:
+        return data[key]
+    return default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,3,1,0.9,True,True,True,True,4,0
+2,task_4_dict,3,dict_utils.py,Use a try-except block to handle the KeyError when the key does not exist.,"def get_value(data: dict, key: str, default=None):
+    try:
+        return data[key]
+    except KeyError:
+        return default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,4,1,0.9,True,True,True,True,4,0
+2,task_4_dict,4,dict_utils.py,Check if the key exists in the dictionary using a conditional expression.,"def get_value(data: dict, key: str, default=None):
+    return data[key] if key in data else default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,1,1,0.9,True,True,True,True,4,0
+3,task_4_dict,1,dict_utils.py,Using the 'get' method instead of 'pop' to retrieve the value. The 'get' method does not modify the dictionary if the key does not exist.,"def get_value(data: dict, key: str, default=None):
+    return data.get(key, default)",1,0,3,0,5,0,1.0,1.0,True,get_value,0,1,1,0.9,True,True,True,True,4,0
+3,task_4_dict,2,dict_utils.py,Checking if the key exists in the dictionary before returning the value. This ensures that the dictionary is not modified if the key does not exist.,"def get_value(data: dict, key: str, default=None):
+    if key in data:
+        return data[key]
+    return default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,3,1,0.9,True,True,True,True,4,0
+3,task_4_dict,3,dict_utils.py,Using a try-except block to catch the 'KeyError' when the key does not exist. This approach avoids modifying the dictionary.,"def get_value(data: dict, key: str, default=None):
+    try:
+        return data[key]
+    except KeyError:
+        return default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,4,1,0.9,True,True,True,True,4,0
+3,task_4_dict,4,dict_utils.py,Adding an example usage block to demonstrate how the function should work without modifying the dictionary. This ensures that the function's behavior is clear and unambiguous.,"def get_value(data: dict, key: str, default=None):
+    return data.get(key, default)
+
+# Example usage
+if __name__ == '__main__':
+    data = {'name': 'Alice'}
+    print(get_value(data, 'name'))  # Output: Alice
+    print(data)  # Output: {'name': 'Alice'}",1,0,3,0,5,0,1.0,1.0,True,get_value,0,7,1,0.9,True,True,True,True,4,0
+4,task_4_dict,1,dict_utils.py,"Uses the dict.get() method which retrieves the value for the specified key if the key is in the dictionary. If the key is not found, it returns the default value without modifying the dictionary.","def get_value(data: dict, key: str, default=None):
+    return data.get(key, default)",1,0,3,0,5,0,1.0,1.0,True,get_value,0,1,1,0.9,True,True,True,True,4,0
+4,task_4_dict,2,dict_utils.py,"This candidate checks if the key exists in the dictionary and returns the corresponding value. If the key does not exist, it returns the provided default value without modifying the dictionary.","def get_value(data: dict, key: str, default=None):
+    value = data.get(key)
+    if value is None:
+        return default
+    return value",1,0,3,0,5,0,1.0,1.0,True,get_value,0,4,1,0.9,True,True,True,True,4,0
+4,task_4_dict,3,dict_utils.py,"Attempts to access the dictionary using the key. If a KeyError is raised (indicating that the key does not exist), it catches the exception and returns the default value. This approach avoids modifying the dictionary.","def get_value(data: dict, key: str, default=None):
+    try:
+        return data[key]
+    except KeyError:
+        return default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,4,1,0.9,True,True,True,True,4,0
+4,task_4_dict,4,dict_utils.py,"Checks if the key exists in the dictionary using the 'in' keyword. If the key exists, it returns the corresponding value; otherwise, it returns the default value. This method does not modify the dictionary.","def get_value(data: dict, key: str, default=None):
+    return data[key] if key in data else default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,1,1,0.9,True,True,True,True,4,0
+5,task_4_dict,1,dict_utils.py,Use the 'get' method of the dictionary which does not modify the dictionary.,"def get_value(data: dict, key: str, default=None):
+    return data.get(key, default)",1,0,3,0,5,0,1.0,1.0,True,get_value,0,1,1,0.9,True,True,True,True,4,0
+5,task_4_dict,2,dict_utils.py,Manually check if the key exists in the dictionary before returning the value.,"def get_value(data: dict, key: str, default=None):
+    if key in data:
+        return data[key]
+    return default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,3,1,0.9,True,True,True,True,4,0
+5,task_4_dict,3,dict_utils.py,Use a try-except block to catch the KeyError when the key does not exist.,"def get_value(data: dict, key: str, default=None):
+    try:
+        return data[key]
+    except KeyError:
+        return default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,4,1,0.9,True,True,True,True,4,0
+5,task_4_dict,4,dict_utils.py,"Use a conditional expression to return the value if the key exists, otherwise return the default value.","def get_value(data: dict, key: str, default=None):
+    return data[key] if key in data else default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,1,1,0.9,True,True,True,True,4,0
+6,task_4_dict,1,dict_utils.py,"This candidate uses the `get` method of the dictionary, which does not modify the dictionary and returns the default value if the key is not found.","def get_value(data: dict, key: str, default=None):
+    return data.get(key, default)",1,0,3,0,5,0,1.0,1.0,True,get_value,0,1,1,0.9,True,True,True,True,4,0
+6,task_4_dict,2,dict_utils.py,"This candidate checks if the key exists in the dictionary and returns the corresponding value. If the key does not exist, it returns the default value without modifying the dictionary.","def get_value(data: dict, key: str, default=None):
+    if key in data:
+        return data[key]
+    return default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,3,1,0.9,True,True,True,True,4,0
+6,task_4_dict,3,dict_utils.py,"This candidate uses a conditional expression to check if the key exists in the dictionary and returns the value or the default value accordingly, without modifying the dictionary.","def get_value(data: dict, key: str, default=None):
+    return data.get(key, default) if key in data else default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,1,1,0.9,True,True,True,True,4,0
+6,task_4_dict,4,dict_utils.py,"This candidate uses a try-except block to catch a `KeyError` if the key is not found in the dictionary and returns the default value instead, without modifying the dictionary.","def get_value(data: dict, key: str, default=None):
+    try:
+        return data[key]
+    except KeyError:
+        return default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,4,1,0.9,True,True,True,True,4,0
+7,task_4_dict,1,dict_utils.py,"Use the get method of the dictionary, which returns the value for the specified key if it exists, otherwise it returns the default value. This method does not modify the dictionary.","def get_value(data: dict, key: str, default=None):
+    return data.get(key, default)",1,0,3,0,5,0,1.0,1.0,True,get_value,0,1,1,0.9,True,True,True,True,4,0
+7,task_4_dict,2,dict_utils.py,"Check if the key exists in the dictionary. If it does, return the value associated with the key. If not, return the default value. This method ensures the dictionary is not modified.","def get_value(data: dict, key: str, default=None):
+    if key in data:
+        return data[key]
+    else:
+        return default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,4,1,0.9,True,True,True,True,4,0
+7,task_4_dict,3,dict_utils.py,"Use a try-except block to catch the KeyError that is raised if the key does not exist in the dictionary. If the key is not found, return the default value. This method ensures the dictionary is not modified.","def get_value(data: dict, key: str, default=None):
+    try:
+        return data[key]
+    except KeyError:
+        return default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,4,1,0.9,True,True,True,True,4,0
+7,task_4_dict,4,dict_utils.py,"Use a conditional expression to check if the key exists in the dictionary. If it does, return the value associated with the key. If not, return the default value. This method ensures the dictionary is not modified.","def get_value(data: dict, key: str, default=None):
+    return data[key] if key in data else default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,1,1,0.9,True,True,True,True,4,0
+8,task_4_dict,1,dict_utils.py,"Use the get method of the dictionary, which returns the value for the specified key if the key is in the dictionary. If the key is not found, it returns the default value without modifying the dictionary.","def get_value(data: dict, key: str, default=None):
+    return data.get(key, default)",1,0,3,0,5,0,1.0,1.0,True,get_value,0,1,1,0.9,True,True,True,True,4,0
+8,task_4_dict,2,dict_utils.py,"Check if the key exists in the dictionary. If it does, return the value. If not, return the default value without modifying the dictionary.","def get_value(data: dict, key: str, default=None):
+    if key in data:
+        return data[key]
+    return default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,3,1,0.9,True,True,True,True,4,0
+8,task_4_dict,3,dict_utils.py,Use a try-except block to catch the KeyError that would be raised if the key is not found in the dictionary. Return the default value in the except block.,"def get_value(data: dict, key: str, default=None):
+    try:
+        return data[key]
+    except KeyError:
+        return default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,4,1,0.9,True,True,True,True,4,0
+8,task_4_dict,4,dict_utils.py,"Check if the key exists in the dictionary. If it does, return the value. If not, return the default value without modifying the dictionary.","def get_value(data: dict, key: str, default=None):
+    if key in data:
+        return data[key]
+    else:
+        return default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,4,1,0.9,True,True,True,True,4,0
+9,task_4_dict,1,dict_utils.py,"This candidate checks if the key exists in the dictionary before returning its value. If the key does not exist, it returns the provided default value without modifying the dictionary.","def get_value(data: dict, key: str, default=None):
+    if key in data:
+        return data[key]
+    return default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,3,1,0.9,True,True,True,True,4,0
+9,task_4_dict,2,dict_utils.py,This candidate uses a try-except block to catch a KeyError when the key does not exist in the dictionary. It then returns the provided default value without modifying the dictionary.,"def get_value(data: dict, key: str, default=None):
+    try:
+        return data[key]
+    except KeyError:
+        return default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,4,1,0.9,True,True,True,True,4,0
+9,task_4_dict,3,dict_utils.py,"This candidate uses the `get` method of the dictionary, which returns the value for the specified key if it exists. If the key does not exist, it returns the provided default value without modifying the dictionary.","def get_value(data: dict, key: str, default=None):
+    return data.get(key, default)",1,0,3,0,5,0,1.0,1.0,True,get_value,0,1,1,0.9,True,True,True,True,4,0
+9,task_4_dict,4,dict_utils.py,"This candidate uses a conditional expression to check if the key exists in the dictionary before returning its value. If the key does not exist, it returns the provided default value without modifying the dictionary.","def get_value(data: dict, key: str, default=None):
+    return data[key] if key in data else default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,1,1,0.9,True,True,True,True,4,0
+10,task_4_dict,1,dict_utils.py,"This candidate checks if the key exists in the dictionary before attempting to retrieve the value. If the key does not exist, it returns the default value without modifying the dictionary.","def get_value(data: dict, key: str, default=None):
+    if key in data:
+        return data[key]
+    else:
+        return default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,4,1,0.9,True,True,True,True,4,0
+10,task_4_dict,2,dict_utils.py,This candidate uses a try-except block to catch a KeyError when the key does not exist in the dictionary. It returns the default value if the key is not found.,"def get_value(data: dict, key: str, default=None):
+    try:
+        return data[key]
+    except KeyError:
+        return default",1,0,3,0,5,0,1.0,1.0,True,get_value,0,4,1,0.9,True,True,True,True,4,0
+10,task_4_dict,3,dict_utils.py,"This candidate uses the get method of the dictionary, which returns the value for the specified key if the key is in the dictionary. If the key is not found, it returns the default value.","def get_value(data: dict, key: str, default=None):
+    value = data.get(key, default)
+    return value",1,0,3,0,5,0,1.0,1.0,True,get_value,0,2,1,0.9,True,True,True,True,4,0
+10,task_4_dict,4,dict_utils.py,"This candidate uses the get method of the dictionary, which returns the value for the specified key if the key is in the dictionary. If the key is not found, it returns None. The function then checks if the value is None and returns the default value if it is.","def get_value(data: dict, key: str, default=None):
+    value = data.get(key)
+    if value is None:
+        return default
+    else:
+        return value",1,0,3,0,5,0,1.0,1.0,True,get_value,0,5,1,0.9,True,True,True,True,4,0
+1,task_5_format,1,format_utils.py,Strips leading and trailing whitespace and then converts to lowercase.,"def clean_label(label: str) -> str:
+    return label.strip().lower()",1,0,4,0,5,0,1.0,1.0,True,clean_label,0,1,1,0.9,True,True,True,True,5,0
+1,task_5_format,2,format_utils.py,Removes extra spaces within the label while stripping leading and trailing whitespace and converting to lowercase.,"def clean_label(label: str) -> str:
+    return ' '.join(label.split()).lower()",1,0,4,0,4,1,0.8,1.0,True,clean_label,0,1,1,0.85,True,True,False,False,4,1
+1,task_5_format,3,format_utils.py,"Removes non-alphanumeric and non-space characters, strips leading and trailing whitespace, and converts to lowercase.","def clean_label(label: str) -> str:
+    return ''.join(c for c in label if c.isalnum() or c.isspace()).strip().lower()",1,0,3,1,2,3,0.4,1.0,True,clean_label,0,1,1,0.6749999999999999,True,False,False,False,2,3
+1,task_5_format,4,format_utils.py,"Uses regular expressions to replace multiple spaces with a single space, strips leading and trailing whitespace, and converts to lowercase.","def clean_label(label: str) -> str:
+    import re
+    return re.sub(r'\s+', ' ', label.strip()).lower()",1,0,4,0,4,1,0.8,1.0,True,clean_label,0,2,1,0.85,True,True,False,False,4,1
+2,task_5_format,1,format_utils.py,Added strip() to remove leading and trailing whitespace before converting to lowercase.,"def clean_label(label: str) -> str:
+    return label.strip().lower()",1,0,4,0,5,0,1.0,1.0,True,clean_label,0,1,1,0.9,True,True,True,True,5,0
+2,task_5_format,2,format_utils.py,Used split() to remove extra spaces between words and then joined them back with a single space before converting to lowercase.,"def clean_label(label: str) -> str:
+    return ' '.join(label.split()).lower()",1,0,4,0,4,1,0.8,1.0,True,clean_label,0,1,1,0.85,True,True,False,False,4,1
+2,task_5_format,3,format_utils.py,"Used a generator expression to iterate through each character, converting it to lowercase and including it if it's alphanumeric or a space.","def clean_label(label: str) -> str:
+    return ''.join(char.lower() for char in label if char.isalnum() or char.isspace())",0,1,0,4,1,4,0.2,1.0,True,clean_label,0,1,1,0.15000000000000002,False,False,False,False,1,4
+2,task_5_format,4,format_utils.py,"First removed all extra spaces by replacing '  ' with a single space, then stripped leading and trailing whitespace, and finally converted to lowercase.","def clean_label(label: str) -> str:
+    return label.strip().replace('  ', ' ').lower()",1,0,4,0,4,1,0.8,1.0,True,clean_label,0,1,1,0.85,True,True,False,False,4,1
+3,task_5_format,1,format_utils.py,This candidate removes leading and trailing whitespace using strip() before converting the label to lowercase.,"def clean_label(label: str) -> str:
+    return label.strip().lower()",1,0,4,0,5,0,1.0,1.0,True,clean_label,0,1,1,0.9,True,True,True,True,5,0
+3,task_5_format,2,format_utils.py,This candidate uses a generator expression within join() to convert each character to lowercase after removing leading and trailing whitespace.,"def clean_label(label: str) -> str:
+    return ''.join(c.lower() for c in label.strip())",1,0,4,0,5,0,1.0,1.0,True,clean_label,0,1,1,0.9,True,True,True,True,5,0
+3,task_5_format,3,format_utils.py,This candidate uses lstrip() and rstrip() separately to remove leading and trailing whitespace before converting the label to lowercase.,"def clean_label(label: str) -> str:
+    return label.lstrip().rstrip().lower()",1,0,4,0,5,0,1.0,1.0,True,clean_label,0,1,1,0.9,True,True,True,True,5,0
+3,task_5_format,4,format_utils.py,"This candidate splits the label into words, converts each word to lowercase, and then joins them back together with a single space in between.","def clean_label(label: str) -> str:
+    return ' '.join(word.lower() for word in label.strip().split())",1,0,4,0,4,1,0.8,1.0,True,clean_label,0,1,1,0.85,True,True,False,False,4,1
+4,task_5_format,1,format_utils.py,The original function only converts the label to lowercase. This candidate adds `strip()` to remove leading and trailing whitespace before converting to lowercase.,"def clean_label(label: str) -> str:
+    return label.strip().lower()",1,0,4,0,5,0,1.0,1.0,True,clean_label,0,1,1,0.9,True,True,True,True,5,0
+4,task_5_format,2,format_utils.py,"This candidate splits the label by whitespace, joins it back with a single space, and then converts it to lowercase. This ensures that multiple consecutive spaces are handled correctly.","def clean_label(label: str) -> str:
+    return ' '.join(label.split()).lower()",1,0,4,0,4,1,0.8,1.0,True,clean_label,0,1,1,0.85,True,True,False,False,4,1
+4,task_5_format,3,format_utils.py,"This candidate removes leading and trailing whitespace, converts the label to lowercase, and replaces all spaces with underscores. This preserves the original spacing while addressing the issue.","def clean_label(label: str) -> str:
+    return label.strip().lower().replace(' ', '_')",0,1,4,0,2,3,0.4,1.0,True,clean_label,0,1,1,0.5,False,False,False,False,2,3
+4,task_5_format,4,format_utils.py,"This candidate iterates through each character in the label, converting it to lowercase if it's alphanumeric or a space, and replacing other characters with spaces. It then strips any leading or trailing spaces. This approach ensures that only meaningful characters and spacing are preserved.","def clean_label(label: str) -> str:
+    return ''.join(c.lower() if c.isalnum() or c.isspace() else ' ' for c in label).strip()",1,0,3,1,2,3,0.4,1.0,True,clean_label,0,1,1,0.6749999999999999,True,False,False,False,2,3
+5,task_5_format,1,format_utils.py,Removes leading and trailing whitespace before converting the label to lowercase.,"def clean_label(label: str) -> str:
+    return label.strip().lower()",1,0,4,0,5,0,1.0,1.0,True,clean_label,0,1,1,0.9,True,True,True,True,5,0
+5,task_5_format,2,format_utils.py,Converts all characters to lowercase and removes non-alphanumeric and non-whitespace characters.,"def clean_label(label: str) -> str:
+    return ''.join(char.lower() for char in label if char.isalnum() or char.isspace())",0,1,0,4,1,4,0.2,1.0,True,clean_label,0,1,1,0.15000000000000002,False,False,False,False,1,4
+5,task_5_format,3,format_utils.py,"Replaces spaces with underscores, converts to lowercase, and then replaces underscores with spaces.","def clean_label(label: str) -> str:
+    return label.replace(' ', '_').lower().replace('_', ' ')",0,1,0,4,1,4,0.2,1.0,True,clean_label,0,1,1,0.15000000000000002,False,False,False,False,1,4
+5,task_5_format,4,format_utils.py,"Splits the label by spaces, converts each word to lowercase, and joins them back with a single space.","def clean_label(label: str) -> str:
+    return ' '.join(word.lower() for word in label.split())",1,0,4,0,4,1,0.8,1.0,True,clean_label,0,1,1,0.85,True,True,False,False,4,1
+6,task_5_format,1,format_utils.py,Strips leading and trailing whitespace before converting to lowercase.,"def clean_label(label: str) -> str:
+    return label.strip().lower()",1,0,4,0,5,0,1.0,1.0,True,clean_label,0,1,1,0.9,True,True,True,True,5,0
+6,task_5_format,2,format_utils.py,Removes extra spaces between words before converting to lowercase.,"def clean_label(label: str) -> str:
+    return ' '.join(label.split()).lower()",1,0,4,0,4,1,0.8,1.0,True,clean_label,0,1,1,0.85,True,True,False,False,4,1
+6,task_5_format,3,format_utils.py,Removes all non-alphanumeric characters before converting to lowercase.,"def clean_label(label: str) -> str:
+    return ''.join(filter(str.isalnum, label)).lower()",0,1,3,1,1,4,0.2,1.0,True,clean_label,0,1,1,0.375,False,False,False,False,1,4
+6,task_5_format,4,format_utils.py,Converts each word to lowercase and joins them back with a single space.,"def clean_label(label: str) -> str:
+    return ' '.join(word.lower() for word in label.split())",1,0,4,0,4,1,0.8,1.0,True,clean_label,0,1,1,0.85,True,True,False,False,4,1
+7,task_5_format,1,format_utils.py,Use strip() to remove leading and trailing whitespace before converting to lowercase.,"def clean_label(label: str) -> str:
+    return label.strip().lower()",1,0,4,0,5,0,1.0,1.0,True,clean_label,0,1,1,0.9,True,True,True,True,5,0
+7,task_5_format,2,format_utils.py,"Split the label by whitespace, join it back together with single spaces, and then convert to lowercase.","def clean_label(label: str) -> str:
+    return ' '.join(label.split()).lower()",1,0,4,0,4,1,0.8,1.0,True,clean_label,0,1,1,0.85,True,True,False,False,4,1
+7,task_5_format,3,format_utils.py,Remove all whitespace characters (including multiple spaces between words) before converting to lowercase.,"def clean_label(label: str) -> str:
+    return label.replace(' ', '').lower()",0,1,4,0,2,3,0.4,1.0,True,clean_label,0,1,1,0.5,False,False,False,False,2,3
+7,task_5_format,4,format_utils.py,"Iterate through each character, convert to lowercase, and include only alphabetic and whitespace characters.","def clean_label(label: str) -> str:
+    return ''.join(c.lower() for c in label if c.isspace() or c.isalpha())",0,1,0,4,1,4,0.2,1.0,True,clean_label,0,1,1,0.15000000000000002,False,False,False,False,1,4
+8,task_5_format,1,format_utils.py,This candidate uses the `strip()` method to remove leading and trailing whitespace before converting the label to lowercase.,"def clean_label(label: str) -> str:
+    return label.strip().lower()",1,0,4,0,5,0,1.0,1.0,True,clean_label,0,1,1,0.9,True,True,True,True,5,0
+8,task_5_format,2,format_utils.py,"This candidate splits the label into words, joins them back with a single space, and then converts the label to lowercase.","def clean_label(label: str) -> str:
+    return ' '.join(label.split()).lower()",1,0,4,0,4,1,0.8,1.0,True,clean_label,0,1,1,0.85,True,True,False,False,4,1
+8,task_5_format,3,format_utils.py,This candidate filters out non-alphanumeric characters before converting the label to lowercase.,"def clean_label(label: str) -> str:
+    return ''.join(filter(str.isalnum, label)).lower()",0,1,3,1,1,4,0.2,1.0,True,clean_label,0,1,1,0.375,False,False,False,False,1,4
+8,task_5_format,4,format_utils.py,"This candidate iterates through each character, converts it to lowercase if it's alphanumeric, and then strips leading/trailing whitespace.","def clean_label(label: str) -> str:
+    return ''.join(c.lower() for c in label if c.isalnum()).strip()",0,1,3,1,1,4,0.2,1.0,True,clean_label,0,1,1,0.375,False,False,False,False,1,4
+9,task_5_format,1,format_utils.py,The function now removes both leading and trailing whitespace before converting the label to lowercase.,"def clean_label(label: str) -> str:
+    return label.strip().lower()",1,0,4,0,5,0,1.0,1.0,True,clean_label,0,1,1,0.9,True,True,True,True,5,0
+9,task_5_format,2,format_utils.py,The function uses a regular expression to replace multiple whitespace characters with a single space before stripping and converting to lowercase.,"def clean_label(label: str) -> str:
+    import re
+    return re.sub(r'\s+', ' ', label).strip().lower()",1,0,4,0,4,1,0.8,1.0,True,clean_label,0,2,1,0.85,True,True,False,False,4,1
+9,task_5_format,3,format_utils.py,"The function splits the label into words, joins them back with a single space, and then converts to lowercase.","def clean_label(label: str) -> str:
+    return ' '.join(label.split()).lower()",1,0,4,0,4,1,0.8,1.0,True,clean_label,0,1,1,0.85,True,True,False,False,4,1
+9,task_5_format,4,format_utils.py,"The function iterates over each character in the label, converting it to lowercase if it's alphanumeric or a whitespace character, and then strips the result.","def clean_label(label: str) -> str:
+    return ''.join([char.lower() for char in label if char.isalnum() or char.isspace()]).strip()",1,0,3,1,2,3,0.4,1.0,True,clean_label,0,1,1,0.6749999999999999,True,False,False,False,2,3
+10,task_5_format,1,format_utils.py,Remove leading and trailing whitespace and then convert to lowercase.,"def clean_label(label: str) -> str:
+    return label.strip().lower()",1,0,4,0,5,0,1.0,1.0,True,clean_label,0,1,1,0.9,True,True,True,True,5,0
+10,task_5_format,2,format_utils.py,"Remove leading and trailing whitespace, convert to lowercase, and ensure single spaces between words.","def clean_label(label: str) -> str:
+    return ' '.join(label.strip().lower().split())",1,0,4,0,4,1,0.8,1.0,True,clean_label,0,1,1,0.85,True,True,False,False,4,1
+10,task_5_format,3,format_utils.py,"Remove leading and trailing whitespace and convert to lowercase, ensuring single spaces between words if multiple spaces are present.","def clean_label(label: str) -> str:
+    label = label.strip()
+    if ' ' in label:
+        return ' '.join(label.lower().split())
+    else:
+        return label.lower()",1,0,4,0,4,1,0.8,1.0,True,clean_label,0,5,1,0.85,True,True,False,False,4,1
+10,task_5_format,4,format_utils.py,"Remove leading and trailing whitespace, convert to lowercase, and ensure single spaces between words.","def clean_label(label: str) -> str:
+    label = label.strip()
+    return ''.join(char.lower() if char.isspace() else char for char in label)",0,1,2,2,1,4,0.2,1.0,True,clean_label,0,2,1,0.30000000000000004,False,False,False,False,1,4
+1,task_6_numeric,1,math_utils.py,Fixed the order of operations to correctly calculate the arithmetic mean.,"def average(a: float, b: float) -> float:
+    return (a + b) / 2",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+1,task_6_numeric,2,math_utils.py,"Used the sum and len functions to calculate the arithmetic mean, ensuring compatibility with more than two values if needed.","def average(a: float, b: float) -> float:
+    return sum([a, b]) / len([a, b])",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+1,task_6_numeric,3,math_utils.py,Ensured that the division is performed as floating-point division to maintain decimal precision.,"def average(a: float, b: float) -> float:
+    return (a * 1.0 + b) / 2",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+1,task_6_numeric,4,math_utils.py,Used a floating-point constant for the divisor to ensure floating-point division.,"def average(a: float, b: float) -> float:
+    return (a + b) / 2.0",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+2,task_6_numeric,1,math_utils.py,"The original implementation was adding a to b/2, which is not the correct formula for the arithmetic mean. The correct formula is (a + b) / 2.","def average(a: float, b: float) -> float:
+    return (a + b) / 2",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+2,task_6_numeric,2,math_utils.py,This candidate uses the Decimal class from the decimal module to ensure that the calculation preserves decimal precision.,"from decimal import Decimal
+
+def average(a: float, b: float) -> float:
+    return Decimal(a + b) / 2",1,0,3,0,2,3,0.4,1.0,True,average,0,3,1,0.75,True,True,False,True,5,0
+2,task_6_numeric,3,math_utils.py,This candidate ensures that the division operation is done with floating-point numbers to maintain decimal precision.,"def average(a: float, b: float) -> float:
+    return (a + b) / 2.0",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+2,task_6_numeric,4,math_utils.py,"This candidate adds a second test function to the file, although it does not fix the bug. It serves as a placeholder to demonstrate that the test file can be used to verify the correctness of the repaired function.","def average(a: float, b: float) -> float:
+    return (a + b) / 2.0
+
+def test_average():
+    assert average(10, 20) == 15",1,0,3,0,5,0,1.0,1.0,True,"average,test_average",1,4,1,0.75,True,True,False,True,5,0
+3,task_6_numeric,1,math_utils.py,The original implementation was calculating the average incorrectly by dividing b by 2 before adding it to a. This fix ensures that both values are added together before dividing by 2 to get the correct arithmetic mean.,"def average(a: float, b: float) -> float:
+    return (a + b) / 2",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+3,task_6_numeric,2,math_utils.py,"This modification ensures that the division by 2.0 is used to maintain decimal precision, even if the inputs are integers.","def average(a: float, b: float) -> float:
+    return (a + b) / 2.0",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+3,task_6_numeric,3,math_utils.py,"This candidate ensures that the division by 2.0 is used for both integer and fractional inputs, maintaining decimal precision in all cases.","def average(a: float, b: float) -> float:
+    return (a + b) / 2.0 if (a + b) % 2 == 0 else (a + b) / 2",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+3,task_6_numeric,4,math_utils.py,"This candidate includes type checking to ensure that both inputs are either integers or floats before calculating the average. If either input is not a valid number, the function returns None, indicating an error in input types.","def average(a: float, b: float) -> float:
+    return (a + b) / 2.0 if isinstance(a, (int, float)) and isinstance(b, (int, float)) else None",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+4,task_6_numeric,1,math_utils.py,Correctly calculates the arithmetic mean by adding the two numbers and then dividing by 2.,"def average(a: float, b: float) -> float:
+    return (a + b) / 2",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+4,task_6_numeric,2,math_utils.py,Uses the sum function to add the two numbers and then divides by 2.,"def average(a: float, b: float) -> float:
+    return sum([a, b]) / 2",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+4,task_6_numeric,3,math_utils.py,Separately divides each number by 2 and then adds the results.,"def average(a: float, b: float) -> float:
+    return a / 2 + b / 2",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+4,task_6_numeric,4,math_utils.py,Ensures decimal precision by dividing by 2.0 instead of 2.,"def average(a: float, b: float) -> float:
+    return (a + b) / 2.0",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+5,task_6_numeric,1,math_utils.py,Fixes the bug by correctly calculating the arithmetic mean.,"def average(a: float, b: float) -> float:
+    return (a + b) / 2",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+5,task_6_numeric,2,math_utils.py,"Uses the sum and len functions to calculate the arithmetic mean, which is more general and handles more than two numbers if needed.","def average(a: float, b: float) -> float:
+    return sum([a, b]) / len([a, b])",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+5,task_6_numeric,3,math_utils.py,Ensures decimal precision by dividing by 2.0 instead of 2.,"def average(a: float, b: float) -> float:
+    return (a + b) / 2.0",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+5,task_6_numeric,4,math_utils.py,Rephrases the calculation to ensure decimal precision and clarity.,"def average(a: float, b: float) -> float:
+    return (a * 0.5) + (b * 0.5)",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+6,task_6_numeric,1,math_utils.py,"The original code was adding a to half of b, which is not the correct way to calculate the arithmetic mean. The corrected code adds a and b, then divides by 2 to get the average.","def average(a: float, b: float) -> float:
+    return (a + b) / 2",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+6,task_6_numeric,2,math_utils.py,This candidate uses the Decimal class from the decimal module to ensure that the calculation preserves decimal precision. This is especially useful for fractional values.,"from decimal import Decimal
+
+def average(a: float, b: float) -> float:
+    return (Decimal(a) + Decimal(b)) / 2",1,0,3,0,2,3,0.4,1.0,True,average,0,3,1,0.75,True,True,False,False,4,1
+6,task_6_numeric,3,math_utils.py,"This candidate uses the sum function to add a and b, then divides by the length of the tuple (a, b) to get the average. This approach is more general and can handle more than two numbers.","def average(a: float, b: float) -> float:
+    return sum((a, b)) / len((a, b))",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+6,task_6_numeric,4,math_utils.py,This candidate uses the Fraction class from the fractions module to ensure that the calculation preserves exact fractional values. The limit_denominator method is used to get a fraction in its simplest form.,"from fractions import Fraction
+
+def average(a: float, b: float) -> float:
+    return float(Fraction(a).limit_denominator() + Fraction(b).limit_denominator()) / 2",1,0,3,0,5,0,1.0,1.0,True,average,0,3,1,0.9,True,True,True,True,5,0
+7,task_6_numeric,1,math_utils.py,"The original implementation was adding b before dividing by 2, which was incorrect. This fix correctly calculates the arithmetic mean.","def average(a: float, b: float) -> float:
+    return (a + b) / 2",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+7,task_6_numeric,2,math_utils.py,Ensuring the division by 2.0 preserves decimal precision for fractional values.,"def average(a: float, b: float) -> float:
+    return (a + b) / 2.0",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+7,task_6_numeric,3,math_utils.py,"Handling the edge case where a and b are the same, to avoid division by zero and return a single value.","def average(a: float, b: float) -> float:
+    return (a + b) / 2.0 if a != b else a",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+7,task_6_numeric,4,math_utils.py,"Ensuring that the function works correctly for the case when a and b are the same, by using the original formula for the mean.","def average(a: float, b: float) -> float:
+    return (a + b) / 2.0 if a != b else a + b / 2.0",1,0,2,1,5,0,1.0,1.0,True,average,0,1,1,0.7999999999999999,True,False,False,True,5,0
+8,task_6_numeric,1,math_utils.py,"The original implementation was incorrectly dividing the second argument by 2, instead of adding it to the first argument and then dividing the sum by 2.","def average(a: float, b: float) -> float:
+    return (a + b) / 2",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+8,task_6_numeric,2,math_utils.py,"Adding .0 to the divisor ensures that the division is performed as floating-point division, preserving decimal precision.","def average(a: float, b: float) -> float:
+    return (a + b) / 2.0",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+8,task_6_numeric,3,math_utils.py,"This version checks if either of the inputs is a fractional value and performs floating-point division, otherwise it performs integer division to preserve precision.","def average(a: float, b: float) -> float:
+    return (a + b) / 2.0 if a % 1 != 0 or b % 1 != 0 else (a + b) // 2",1,0,3,0,4,1,0.8,1.0,True,average,0,1,1,0.85,True,True,False,False,4,1
+8,task_6_numeric,4,math_utils.py,"This version allows for the inputs to be either integers or floats, ensuring the function can handle a wider range of inputs while preserving decimal precision.","from typing import Union
+
+def average(a: Union[int, float], b: Union[int, float]) -> float:
+    return (a + b) / 2.0",1,0,3,0,5,0,1.0,1.0,True,average,0,4,2,0.9,True,True,True,True,5,0
+9,task_6_numeric,1,math_utils.py,The original implementation was dividing b by 2 instead of adding a and b together.,"def average(a: float, b: float) -> float:
+    return (a + b) / 2",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+9,task_6_numeric,2,math_utils.py,Ensuring the division results in a float to preserve decimal precision.,"def average(a: float, b: float) -> float:
+    return (a + b) / 2.0",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+9,task_6_numeric,3,math_utils.py,"Same as candidate 1, ensuring the division results in a float to preserve decimal precision.","def average(a: float, b: float) -> float:
+    return (a + b) / 2",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+9,task_6_numeric,4,math_utils.py,"Same as candidate 1, ensuring the division results in a float to preserve decimal precision.","def average(a: float, b: float) -> float:
+    return (a + b) / 2",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+10,task_6_numeric,1,math_utils.py,"The original implementation was dividing b by 2 before adding it to a, which is incorrect. The correct approach is to add a and b together and then divide the result by 2.","def average(a: float, b: float) -> float:
+    return (a + b) / 2",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+10,task_6_numeric,2,math_utils.py,This candidate ensures that the division is performed with floating-point precision by using 2.0 instead of 2.,"def average(a: float, b: float) -> float:
+    return (a + b) / 2.0",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+10,task_6_numeric,3,math_utils.py,This candidate uses the `sum` function to add a and b together and then divides the result by 2. This approach is clear and avoids potential issues with floating-point arithmetic.,"def average(a: float, b: float) -> float:
+    return sum((a, b)) / 2",1,0,3,0,5,0,1.0,1.0,True,average,0,1,1,0.9,True,True,True,True,5,0
+10,task_6_numeric,4,math_utils.py,"This candidate not only fixes the bug but also adds additional test cases to ensure the function works correctly with different types of inputs, including positive, negative, and fractional values.","def average(a: float, b: float) -> float:
+    return (a + b) / 2.0
+
+# Additional test cases
+assert average(3.5, 2.5) == 3.0
+assert average(-10, 20) == 5.0",1,0,3,0,5,0,1.0,1.0,True,average,0,5,1,0.9,True,True,True,True,5,0

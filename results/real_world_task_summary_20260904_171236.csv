@@ -1,0 +1,4 @@
+run_id,task_id,repair_type,requested_candidates,valid_generated_candidates,generation_complete,visible_accepted,vera_accepted,oracle_correct,baseline_a_false_acceptances,baseline_a_false_rejections,vera_false_acceptances,vera_false_rejections,vera_selected_candidate_id,vera_selected_score
+20260904_171236,bugsinpy_black_13,function,4,0,False,0,0,0,0,0,0,0,,
+20260904_171236,bugsinpy_black_14,function,4,2,False,0,0,0,0,0,0,0,,
+20260904_171236,bugsinpy_black_16,function,4,0,False,0,0,0,0,0,0,0,,
