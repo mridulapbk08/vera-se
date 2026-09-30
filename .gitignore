@@ -21,3 +21,4 @@ __pycache__/
 # Temporary files
 *.log
 *.tmp
+paper/VERA_SE_Manuscript_Backup_*.docx
